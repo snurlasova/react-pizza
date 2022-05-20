@@ -33,7 +33,7 @@ export const thunkPizzaAction = (
     dispatch({ type: CardActionTypes.REQUESTED_PIZZA });
     try {
       const response = await axios.get(
-        `http://localhost:3005/menu?${
+        `https://my-json-server.typicode.com/nurlasova/react-pizza/menu?${
           category !== null ? `category=${category}` : ''
         }&_sort=${sortBy.type}&_order=${sortBy.order}`
       );
