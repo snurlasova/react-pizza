@@ -16,7 +16,7 @@ const CardItem: React.FC<ICardItemProps> = (props) => {
   const { itemCount } = props;
   const { title, category, id, price, url, types, sizes } = props.item,
     pizzaSize = [26, 30, 40],
-    pizzaTypes = ['thin', 'traditional'],
+    pizzaTypes = ['традиционное', 'традиционное'],
     [colorPlus, setColorPlus] = useState('#EB5A1E'),
     [activeSize, setActiveSize] = useState<number>(2),
     [activeType, setActiveType] = useState<number>(types[0]);
@@ -69,7 +69,7 @@ const CardItem: React.FC<ICardItemProps> = (props) => {
         </ul>
       </div>
       <div className="mt-4 d-flex justify-content-between align-items-center">
-        <p className={classes.cardPrice}>from {price} $</p>
+        <p className={classes.cardPrice}>до {price} сом</p>
         <button
           className={classes.btn}
           onMouseLeave={(e) => setColorPlus('#FE5F1E')}
@@ -93,7 +93,7 @@ const CardItem: React.FC<ICardItemProps> = (props) => {
                 />
               </svg>
             </span>
-            <p>Add</p>
+            <p>Добавить</p>
             {itemCount > 0 ? (
               <span className={classes.count}>
                 <span>{itemCount}</span>

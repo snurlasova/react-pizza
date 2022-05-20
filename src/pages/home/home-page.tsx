@@ -18,17 +18,17 @@ const HomePage = () => {
     dispatch(thunkPizzaAction(category, sortBy));
   }, [category, sortBy]);
   const sortIems = [
-    { name: 'popularity', type: 'popular', order: 'desc' },
-    { name: 'price', type: 'price', order: 'desc' },
-    { name: 'alphabet', type: 'name', order: 'asc' },
+    { name: 'По популярности', type: 'popular', order: 'desc' },
+    { name: 'По цене', type: 'price', order: 'desc' },
+    { name: 'По алфавиту', type: 'name', order: 'asc' },
   ];
 
   const categoryNames = [
-    'Meaty',
-    'Vegetarian',
-    'Grill',
-    'Spicy',
-    'Closed',
+    'Мясные',
+    'Веган',
+    'Гриль',
+    'Острый',
+    'Закрытые',
   ];
 
   const onSelectCategory = useCallback((index: number | null) => {

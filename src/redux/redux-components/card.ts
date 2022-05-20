@@ -26,8 +26,8 @@ const cardReducer = (state = initialState, action: CardAction): CardState => {
 };
 
 export const thunkPizzaAction = (
-  category: string,
-  sortBy: { type: string; order: string }
+  category: any,
+  sortBy: any
 ) => {
   return async (dispatch: Dispatch<CardAction>) => {
     dispatch({ type: CardActionTypes.REQUESTED_PIZZA });

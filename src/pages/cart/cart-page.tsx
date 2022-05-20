@@ -180,12 +180,12 @@ function Cart() {
       ) : (
         <div className="cart cart--empty">
           <h2>
-            Cart is empty <i>😕</i>
+            Корзина пустая <i>😕</i>
           </h2>
           <p>
-            You probably haven't ordered a pizza yet.
+            Вы, наверное, еще не заказали пиццу.
             <br />
-            To order a pizza, go to the home page.
+            Чтобы заказать пиццу, перейдите на главную страницу.
           </p>
           <img src={cartEmptyImage} alt="Empty cart" />
           <Link to="/" className="button button--black">

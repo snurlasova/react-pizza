@@ -61,7 +61,7 @@ const SortPopup: FC<ISortPopupProps> = React.memo(function SortPopup({
             fill="#2C2C2C"
           />
         </svg>
-        <b>Sorting by:</b>
+        <b>Сортировать по:</b>
         <span onClick={toggleVisiblePopup}>{activeLabel}</span>
       </div>
       {visiblePopup && (

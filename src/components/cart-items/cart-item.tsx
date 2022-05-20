@@ -35,7 +35,7 @@ const CartItem: FC<ICartItemProps> = (props) => {
       <div className="cart__item-info">
         <h3>{title}</h3>
         <p>
-          {type} dough, {size} см.
+          {type} тесто, {size} см.
         </p>
       </div>
       <div className="cart__item-count">
@@ -84,7 +84,7 @@ const CartItem: FC<ICartItemProps> = (props) => {
         </div>
       </div>
       <div className="cart__item-price">
-        <b>{totalPrice.toFixed(2).toString().length < 4 ? `${totalPrice.toFixed(2)}0`:  totalPrice.toFixed(2)} $</b>
+        <b>{totalPrice.toFixed(2).toString().length < 4 ? `${totalPrice.toFixed(2)}0`:  totalPrice.toFixed(2)} cом</b>
       </div>
       <div className="cart__item-remove">
         <button onClick={() => onRemove(id)} className="button--circle">

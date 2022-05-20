@@ -3,7 +3,7 @@
 		{
 			"id": 0,
 			"url": "https://dodopizza.azureedge.net/static/Img/Products/f035c7f46c0844069722f2bb3ee9f113_584x584.jpeg",
-			"title": "Pepperoni Fresh with peppers",
+			"title": "Чизбургер-пицца",
 			"types": [0, 1],
 			"sizes": [26, 30, 40],
 			"price": 12.31,
@@ -13,7 +13,7 @@
 		{
 			"id": 1,
 			"url": "https://dodopizza.azureedge.net/static/Img/Products/Pizza/ru-RU/2ffc31bb-132c-4c99-b894-53f7107a1441.jpg",
-			"title": "Cheese",
+			"title": "Сырная",
 			"types": [0],
 			"sizes": [26, 40],
 			"price": 10.15,
@@ -23,7 +23,7 @@
 		{
 			"id": 2,
 			"url": "https://dodopizza.azureedge.net/static/Img/Products/Pizza/ru-RU/6652fec1-04df-49d8-8744-232f1032c44b.jpg",
-			"title": "Barbecue chicken",
+			"title": "Креветки по-азиатски",
 			"types": [0],
 			"sizes": [26, 40],
 			"price": 14,
@@ -33,7 +33,7 @@
 		{
 			"id": 3,
 			"url": "https://dodopizza.azureedge.net/static/Img/Products/Pizza/ru-RU/af553bf5-3887-4501-b88e-8f0f55229429.jpg",
-			"title": "Sweet and sour chicken",
+			"title": "Сырный цыпленок",
 			"types": [1],
 			"sizes": [26, 30, 40],
 			"price": 9,
@@ -53,7 +53,7 @@
 		{
 			"id": 5,
 			"url": "https://dodopizza.azureedge.net/static/Img/Products/Pizza/ru-RU/1e1a6e80-b3ba-4a44-b6b9-beae5b1fbf27.jpg",
-			"title": "Crazy pepperoni",
+			"title": "Чизбургер-пицца",
 			"types": [0],
 			"sizes": [30, 40],
 			"price": 20,
@@ -63,7 +63,7 @@
 		{
 			"id": 6,
 			"url": "https://dodopizza.azureedge.net/static/Img/Products/Pizza/ru-RU/d2e337e9-e07a-4199-9cc1-501cc44cb8f8.jpg",
-			"title": "Pepperoni",
+			"title": "Пепперони",
 			"types": [0, 1],
 			"sizes": [26, 30, 40],
 			"price": 13.45,
@@ -73,7 +73,7 @@
 		{
 			"id": 7,
 			"url": "https://dodopizza.azureedge.net/static/Img/Products/Pizza/ru-RU/d48003cd-902c-420d-9f28-92d9dc5f73b4.jpg",
-			"title": "Margarita",
+			"title": "Маргарита",
 			"types": [0, 1],
 			"sizes": [26, 30, 40],
 			"price": 18,
@@ -83,7 +83,7 @@
 		{
 			"id": 8,
 			"url": "https://dodopizza.azureedge.net/static/Img/Products/Pizza/ru-RU/ec29465e-606b-4a04-a03e-da3940d37e0e.jpg",
-			"title": "Four Seasons",
+			"title": "Четыре времени года",
 			"types": [0, 1],
 			"sizes": [26, 30, 40],
 			"price": 14,
@@ -93,7 +93,7 @@
 		{
 			"id": 9,
 			"url": "https://dodopizza.azureedge.net/static/Img/Products/Pizza/ru-RU/30367198-f3bd-44ed-9314-6f717960da07.jpg",
-			"title": "Vegetables and mushrooms 🌱",
+			"title": "Овощи и грибы 🌱",
 			"types": [0, 1],
 			"sizes": [26, 30, 40],
 			"price": 17.32,
