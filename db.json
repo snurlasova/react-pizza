@@ -6,7 +6,7 @@
 			"title": "Чизбургер-пицца",
 			"types": [0, 1],
 			"sizes": [26, 30, 40],
-			"price": 325,
+			"price": 350,
 			"category": 0,
 			"rating": 4
 		},
