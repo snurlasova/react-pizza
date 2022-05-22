@@ -69,7 +69,7 @@ const CardItem: React.FC<ICardItemProps> = (props) => {
         </ul>
       </div>
       <div className="mt-4 d-flex justify-content-between align-items-center">
-        <p className={classes.cardPrice}>до {price} сом</p>
+        <p className={classes.cardPrice}> от {price} сом</p>
         <button
           className={classes.btn}
           onMouseLeave={(e) => setColorPlus('#FE5F1E')}
