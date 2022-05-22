@@ -21,13 +21,13 @@ function Cart() {
   });
 
   const onClearCart = () => {
-    if (window.confirm('Do you really want to empty your cart?')) {
+    if (window.confirm('Вы действительно хотите опустошить свою корзину?')) {
       dispatch({ type: CartActionTypes.CLEAR_PIZZA });
     }
   };
 
   const onRemoveItem = (id: number) => {
-    if (window.confirm('Do you really want to delete?')) {
+    if (window.confirm('Вы действительно хотите удалить?')) {
       dispatch({ type: CartActionTypes.REMOVE_PIZZA, payload: id });
     }
   };
@@ -41,7 +41,7 @@ function Cart() {
   };
 
   const onClickOrder = () => {
-    console.log('YOUR ORDER', items);
+    console.log('ВАШ ЗАКАЗ', items);
   };
 
   return (
@@ -79,7 +79,7 @@ function Cart() {
                   strokeLinejoin="round"
                 />
               </svg>
-              Cart
+              Корзина
             </h2>
             <div className="cart__clear">
               <svg
@@ -118,7 +118,7 @@ function Cart() {
                   strokeLinejoin="round"
                 />
               </svg>
-              <span onClick={onClearCart}>Empty Cart</span>
+              <span onClick={onClearCart}>Очистить корзину</span>
             </div>
           </div>
           <div className="content__items">
@@ -141,10 +141,10 @@ function Cart() {
           <div className="cart__bottom">
             <div className="cart__bottom-details">
               <span>
-                Total pizzas: <b>{totalCount} шт.</b>
+              Всего пицц: <b>{totalCount} шт.</b>
               </span>
               <span>
-                Order amount: <b>{totalPrice ? totalPrice.toFixed(2) : totalPrice} $</b>
+              Сумма заказа: <b>{totalPrice ? totalPrice.toFixed(2) : totalPrice} сом</b>
               </span>
             </div>
             <div className="cart__bottom-buttons">
@@ -168,11 +168,11 @@ function Cart() {
                   />
                 </svg>
                 <Link to="/">
-                  <span>Go back</span>
+                  <span>Вернуться назад</span>
                 </Link>
               </a>
               <button onClick={onClickOrder} className="pay-btn">
-                <span>Pay Now</span>
+                <span>Платить сейчас</span>
               </button>
             </div>
           </div>
@@ -189,7 +189,7 @@ function Cart() {
           </p>
           <img src={cartEmptyImage} alt="Empty cart" />
           <Link to="/" className="button button--black">
-            <span>Go back</span>
+            <span>Вернуться назад</span>
           </Link>
         </div>
       )}
