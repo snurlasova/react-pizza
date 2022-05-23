@@ -182,10 +182,11 @@ function Cart() {
                 </Link>
               </a>
 
-              <button onClick={toggleModal} className="pay-btn">
-                <span>Платить сейчас</span>
-              <BaseModalWrapper isModalVisible={isModalVisibble} onBackdropClick={toggleModal} header={''} ContainerComponent={undefined} CloseButtonComponent={undefined}/>
-              </button>
+             
+               <button onClick={toggleModal} className="pay-btn"> 
+              <span>Платить сейчас</span>
+              </button> 
+                
 
 
             </div>
@@ -207,6 +208,7 @@ function Cart() {
           </Link>
         </div>
       )}
+   <BaseModalWrapper isModalVisible={isModalVisibble} onBackdropClick={toggleModal} header={''} ContainerComponent={undefined} CloseButtonComponent={undefined}/>
     </div>
   );
 }

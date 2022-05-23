@@ -28,7 +28,7 @@ const BaseModalWrapper: React.FC<any> = ({content, ContainerComponent, CloseButt
   }
 
     return (<Modal onBackdropClick={onBackdropClick}>
-      <>
+      
       <div className="modal">
       <div className="modal__container">
         <h1 className="modal__title">Оформление заказа</h1>
@@ -48,7 +48,7 @@ const BaseModalWrapper: React.FC<any> = ({content, ContainerComponent, CloseButt
       </div>
 
       </div>
-      </>
+  
     </Modal>);
 }
 

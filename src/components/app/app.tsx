@@ -4,6 +4,8 @@ import './_app.scss';
 import { Route, Switch } from 'react-router';
 import CartPage from '../../pages/cart/cart-page';
 import HomePage from '../../pages/home/home-page';
+// import BaseModalWrapper  from '../../components/modal/BaseModalWrapper';
+
 
 const App: React.FC = () => {
   return (
@@ -14,6 +16,7 @@ const App: React.FC = () => {
           <Switch>
             <Route exact path="/" component={HomePage} />
             <Route exact path="/cart" component={CartPage} />
+  
           </Switch>
         </div>
       </div>
