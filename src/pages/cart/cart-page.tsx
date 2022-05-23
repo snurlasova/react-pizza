@@ -1,4 +1,5 @@
 import React from 'react';
+import {useState} from 'react'
 import { useSelector, useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 
@@ -9,6 +10,9 @@ import { useTypedSelector } from '../../hooks/useTypedSelector';
 
 import './cart.scss';
 import { CartActionTypes } from '../../types/redux/ICart';
+
+import BaseModalWrapper  from '../../components/modal/BaseModalWrapper';
+
 
 function Cart() {
   const dispatch = useDispatch();
@@ -44,7 +48,13 @@ function Cart() {
     console.log('ВАШ ЗАКАЗ', items);
   };
 
-  return (
+  const [isModalVisibble, setIsModalVisible] = useState (false);
+  const toggleModal = () => {
+    setIsModalVisible(wasModalVisible => ! wasModalVisible)
+  }
+
+
+     return (
     <div className="container container--cart">
       {totalCount ? (
         <div className="cart">
@@ -171,9 +181,13 @@ function Cart() {
                   <span>Вернуться назад</span>
                 </Link>
               </a>
-              <button onClick={onClickOrder} className="pay-btn">
+
+              <button onClick={toggleModal} className="pay-btn">
                 <span>Платить сейчас</span>
+              <BaseModalWrapper isModalVisible={isModalVisibble} onBackdropClick={toggleModal} header={''} ContainerComponent={undefined} CloseButtonComponent={undefined}/>
               </button>
+
+
             </div>
           </div>
         </div>
