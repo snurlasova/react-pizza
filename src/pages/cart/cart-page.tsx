@@ -48,10 +48,13 @@ function Cart() {
     console.log('ВАШ ЗАКАЗ', items);
   };
 
-  const [isModalVisibble, setIsModalVisible] = useState (false);
-  const toggleModal = () => {
-    setIsModalVisible(wasModalVisible => ! wasModalVisible)
-  }
+    const [open, setOpen] = React.useState(false);
+  const handleOpen = () => {
+    setOpen(true);
+  };
+  const handleClose = () => {
+    setOpen(false);
+  };
 
 
      return (
@@ -183,8 +186,9 @@ function Cart() {
               </a>
 
              
-               <button onClick={toggleModal} className="pay-btn"> 
+              <button onClick={handleOpen} className="pay-btn"> 
               <span>Платить сейчас</span>
+              <BaseModalWrapper  />
               </button> 
                 
 
@@ -208,7 +212,6 @@ function Cart() {
           </Link>
         </div>
       )}
-   <BaseModalWrapper isModalVisible={isModalVisibble} onBackdropClick={toggleModal} header={''} ContainerComponent={undefined} CloseButtonComponent={undefined}/>
     </div>
   );
 }

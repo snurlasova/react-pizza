@@ -1,23 +1,5 @@
-@import '../global'; 
+@import '../global';
 .modal{
-    position: relative;
-    width: 100%;
-    height: 100%;
-    margin:0 auto;
-    background-color:beige; 
-    font-family: "Proxima Nova", sans-serif;  
-    &__container{
-        width: 900px;
-        background-color: #ffdf8c;
-        margin: 0 auto;
-        display: flex;
-        flex-direction: column;
-        align-items: center;       
-        
-    }
-    &__title{
-    display: flex;
-    align-items: center;
-    font-size:15px;
-    }
+    width: 400px;
+    height: 100px;
 }
