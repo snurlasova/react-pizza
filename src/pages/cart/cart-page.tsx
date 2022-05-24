@@ -187,8 +187,8 @@ function Cart() {
 
              
               <button onClick={handleOpen} className="pay-btn"> 
-              <span>Платить сейчас</span>
-              <BaseModalWrapper  />
+              {/* <span>Платить сейчас</span> */}
+              <BaseModalWrapper/>
               </button> 
                 
 

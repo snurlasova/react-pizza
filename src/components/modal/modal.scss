@@ -1,5 +1,59 @@
 @import '../global';
-.modal{
-    width: 400px;
-    height: 100px;
+h2#parent-modal-title{
+    color: black;
+    font-size: 25px;
+    font-family: "Proxima Nova", sans-serif;
+    padding: bottom 15px;
+    font-weight: bolder; 
+    text-align: center; 
+    
+}
+h2#child-modal-title{
+    color: black;
+    font-size: 20px;
+    font-family: "Proxima Nova", sans-serif;
+    padding-bottom:10px;
+    font-weight: bolder; 
+}
+button.css-1e6y48t-MuiButtonBase-root-MuiButton-root{
+    @include font(1.3rem, 600, 1.4rem, #fff);
+    background-color: $orange;
+    border-radius: 3rem;
+    outline:none;
+    border: none;
+}
+button.css-1e6y48t-MuiButtonBase-root-MuiButton-root:hover{
+    border: 1px solid $orange;
+    color:#000;
+    outline: none;
+}   
+
+.label{
+    @include font(1.2rem, 600, 1.4rem, #000);
+}
+.input{
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    padding: 12px;
+    margin: 5px 0 5px 5px;
+}
+
+.css-6z8jno{
+border-radius:10px;
+}
+.css-1fo3i9n{
+    border:2px solid $orange;
+    border-radius:20px;
+}
+.row--btn{
+    display: flex;
+    flex-direction: column;
+}
+.form__col{
+    display:flex;
+    flex-direction: column;
+}
+.label__check{
+@include font(1rem, 600, 1rem, rgba(19, 19, 138, 0.753));
+padding:10px 0;
 }

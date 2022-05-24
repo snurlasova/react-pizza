@@ -2,6 +2,9 @@ import * as React from 'react';
 import Box from '@mui/material/Box';
 import Modal from '@mui/material/Modal';
 import Button from '@mui/material/Button';
+import './modal.scss'
+import { white } from 'material-ui/styles/colors';
+
 
 const style = {
   position: 'absolute' as 'absolute',
@@ -28,7 +31,7 @@ function ChildModal() {
 
   return (
     <React.Fragment>
-      <Button onClick={handleOpen}>Open Child Modal</Button>
+      <Button onClick={handleOpen}>Готово</Button>
       <Modal
         hideBackdrop
         open={open}
@@ -36,12 +39,9 @@ function ChildModal() {
         aria-labelledby="child-modal-title"
         aria-describedby="child-modal-description"
       >
-        <Box sx={{ ...style, width: 200 }}>
-          <h2 id="child-modal-title">Text in a child modal</h2>
-          <p id="child-modal-description">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-          </p>
-          <Button onClick={handleClose}>Close Child Modal</Button>
+        <Box className="css-6z8jno" sx={{ ...style, width: 250, height:150 }}>
+          <h2 id="child-modal-title">Спасибо,Ваш заказ принят!</h2>
+          <Button onClick={handleClose}>Закрыть</Button>
         </Box>
       </Modal>
     </React.Fragment>
@@ -59,19 +59,38 @@ export default function NestedModal() {
 
   return (
     <div>
-      <Button onClick={handleOpen}>Open modal</Button>
+      <Button  className="css-1e6y48t-MuiButtonBase-root-MuiButton-root" onClick={handleOpen}>Платить сейчас</Button>
       <Modal
         open={open}
         onClose={handleClose}
         aria-labelledby="parent-modal-title"
         aria-describedby="parent-modal-description"
       >
-        <Box sx={{ ...style, width: 400 }}>
-          <h2 id="parent-modal-title">Text in a modal</h2>
-          <p id="parent-modal-description">
-            Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
-          </p>
-          <ChildModal />
+        <Box className="css-1fo3i9n" sx={{ ...style, width:500, height:600}}>
+          <h2 id="parent-modal-title">ОФОРМЛЕНИЕ ЗАКАЗА</h2>
+          <form>
+  <div className="form__col">
+    <label className="label"> ФИО: </label>
+    <input  className="input" type="text" name="name" required placeholder="Ваше имя" />
+ 
+    <label className="label"> Номер телефона:  </label>
+    <input className="input" type="number" name="number" required placeholder="Ваш номер" />
+
+    <label className="label"> Адрес: </label>
+    <input  className="input" type="text" name="address" required />
+    
+    <label className="label">   Номер карты:  </label>
+    <input className="input" type="number" name="number" required placeholder="1111-2222-3333-4444"/>
+
+    <label className="label">  Введите сумму:  </label>
+    <input className="input" type="number" name="number" required/>
+    <label className="label__check">
+      <input type="checkbox" required/> Адрес доставки совпадает с платежным адресом
+    </label>
+  </div>
+  </form>
+  <ChildModal />
+       
         </Box>
       </Modal>
     </div>
