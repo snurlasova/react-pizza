@@ -43,7 +43,7 @@
 		{
 			"id": 4,
 			"url": "https://dodopizza.azureedge.net/static/Img/Products/Pizza/ru-RU/b750f576-4a83-48e6-a283-5a8efb68c35d.jpg",
-			"title": "Пепперони с кетчупом",
+			"title": "Чизбургер",
 			"types": [0, 1],
 			"sizes": [26, 30, 40],
 			"price": 415,
@@ -53,7 +53,7 @@
 		{
 			"id": 5,
 			"url": "https://dodopizza.azureedge.net/static/Img/Products/Pizza/ru-RU/1e1a6e80-b3ba-4a44-b6b9-beae5b1fbf27.jpg",
-			"title": "Чизбургер-пицца",
+			"title": "Пепперони с кетчупом",
 			"types": [0],
 			"sizes": [30, 40],
 			"price": 335,
