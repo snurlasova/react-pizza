@@ -39,8 +39,8 @@ function ChildModal() {
         aria-labelledby="child-modal-title"
         aria-describedby="child-modal-description"
       >
-        <Box className="css-6z8jno" sx={{ ...style, width: 250, height:150 }}>
-          <h2 id="child-modal-title">Спасибо,Ваш заказ принят!</h2>
+        <Box className="css-6z8jno" sx={{ ...style, width: 200, height:150 }}>
+          <h2 id="child-modal-title">Спасибо,  Ваш заказ принят!</h2>
           <Button onClick={handleClose}>Закрыть</Button>
         </Box>
       </Modal>
@@ -66,7 +66,7 @@ export default function NestedModal() {
         aria-labelledby="parent-modal-title"
         aria-describedby="parent-modal-description"
       >
-        <Box className="css-1fo3i9n" sx={{ ...style, width:500, height:600}}>
+        <Box className="css-1fo3i9n MuiBox-root" sx={{ ...style, width:500, height:550}}>
           <h2 id="parent-modal-title">ОФОРМЛЕНИЕ ЗАКАЗА</h2>
           <form>
   <div className="form__col">

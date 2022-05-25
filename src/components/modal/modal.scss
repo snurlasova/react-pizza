@@ -1,4 +1,6 @@
 @import '../global';
+
+
 h2#parent-modal-title{
     color: black;
     font-size: 25px;
@@ -19,8 +21,8 @@ button.css-1e6y48t-MuiButtonBase-root-MuiButton-root{
     @include font(1.3rem, 600, 1.4rem, #fff);
     background-color: $orange;
     border-radius: 3rem;
-    outline:none;
     border: none;
+    outline:none;
 }
 button.css-1e6y48t-MuiButtonBase-root-MuiButton-root:hover{
     border: 1px solid $orange;
@@ -32,16 +34,16 @@ button.css-1e6y48t-MuiButtonBase-root-MuiButton-root:hover{
     @include font(1.2rem, 600, 1.4rem, #000);
 }
 .input{
-    border: 1px solid #ccc;
-    border-radius: 3px;
+    border: 1px solid $orange;
+    border-radius: 30px;
     padding: 12px;
-    margin: 5px 0 5px 5px;
+    margin: 5px 0;
 }
 
 .css-6z8jno{
 border-radius:10px;
 }
-.css-1fo3i9n{
+.css-1fo3i9n.MuiBox-root{
     border:2px solid $orange;
     border-radius:20px;
 }
@@ -56,4 +58,52 @@ border-radius:10px;
 .label__check{
 @include font(1rem, 600, 1rem, rgba(19, 19, 138, 0.753));
 padding:10px 0;
+}
+
+@media (max-width: 768px){
+    h2#parent-modal-title{
+        color: black;
+        font-size: 20px;
+        font-family: "Proxima Nova", sans-serif;
+        padding: bottom 15px;
+        font-weight: bolder; 
+        text-align: center; 
+        
+    }
+   
+    .css-1fo3i9n.MuiBox-root{
+        border:2px solid $orange;
+        border-radius:20px;
+        width: 380px;  
+        height: 600px;     
+    }
+    .input{
+      width:310px;
+    }
+}
+@media (max-width: 400px){
+    h2#parent-modal-title{
+        color: black;
+        font-size: 20px;
+        font-family: "Proxima Nova", sans-serif;
+        padding: bottom 15px;
+        font-weight: bolder; 
+        text-align: center; 
+        
+    }
+      .css-1fo3i9n.MuiBox-root{
+        border:2px solid $orange;
+        border-radius:20px;
+        width: 280px;
+        height:580px;       
+    }
+    .label{
+        font-size:15px;
+    }
+    .label__check{
+        font-size: 10px;
+    }
+    .input{
+      width:210px;
+    }
 }
