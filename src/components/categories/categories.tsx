@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import './_categories.scss';
-
+import { useTranslation } from 'react-i18next';
 interface ICategoriesProps {
   activeCategory: number | null;
   items: string[];
@@ -11,7 +11,9 @@ const Categories: FC<ICategoriesProps> = React.memo(function Categories({
   activeCategory,
   items,
   onClickCategory,
-}) {
+})
+{
+ const {t} = useTranslation() 
   return (
     <div className="categories">
       <ul>
@@ -19,7 +21,7 @@ const Categories: FC<ICategoriesProps> = React.memo(function Categories({
           className={activeCategory === null ? 'active' : ''}
           onClick={() => onClickCategory(null)}
         >
-          Все
+        {t('categorie1')} 
         </li>
         {items &&
           items.map((name, index) => (

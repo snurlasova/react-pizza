@@ -1,4 +1,5 @@
 import React, { FC, MouseEvent } from 'react';
+import { useTranslation } from 'react-i18next';
 import './_sort-popup.scss';
 
 // type M = MouseEvent & {
@@ -44,7 +45,7 @@ const SortPopup: FC<ISortPopupProps> = React.memo(function SortPopup({
   React.useEffect(() => {
     document.body.addEventListener('click', handleOutsideClick);
   }, []);
-
+  const {t} = useTranslation()
   return (
     <div ref={sortRef} className="sort">
       <div className="sort__label">
@@ -61,7 +62,7 @@ const SortPopup: FC<ISortPopupProps> = React.memo(function SortPopup({
             fill="#2C2C2C"
           />
         </svg>
-        <b>Сортировать по:</b>
+        <b>{t('sort-title')} </b>
         <span onClick={toggleVisiblePopup}>{activeLabel}</span>
       </div>
       {visiblePopup && (

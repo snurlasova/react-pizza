@@ -8,8 +8,10 @@ import Categories from '../../components/categories/categories';
 import SortPopup from '../../components/sort-popup/sort-popup';
 import { setCategory, setSortBy } from '../../redux/redux-components/filter';
 import { thunkPizzaAction } from '../../redux/redux-components/card';
+import { useTranslation } from 'react-i18next';
 
 const HomePage = () => {
+  const {t} = useTranslation();
   const dispatch = useDispatch();
 
   const { category, sortBy } = useTypedSelector((state) => state.filter);

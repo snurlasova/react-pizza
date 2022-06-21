@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import {useState} from 'react'
 import { useSelector, useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
@@ -55,7 +56,7 @@ function Cart() {
   const handleClose = () => {
     setOpen(false);
   };
-
+  const {t} = useTranslation()
 
      return (
     <div className="container container--cart">
@@ -92,7 +93,7 @@ function Cart() {
                   strokeLinejoin="round"
                 />
               </svg>
-              Корзина
+              {t('cart')}
             </h2>
             <div className="cart__clear">
               <svg
@@ -131,7 +132,7 @@ function Cart() {
                   strokeLinejoin="round"
                 />
               </svg>
-              <span onClick={onClearCart}>Очистить корзину</span>
+              <span onClick={onClearCart}>{t('cart.clear')}</span>
             </div>
           </div>
           <div className="content__items">
@@ -154,10 +155,10 @@ function Cart() {
           <div className="cart__bottom">
             <div className="cart__bottom-details">
               <span>
-              Всего пицц: <b>{totalCount} шт.</b>
+              {t('total.pizza')} <b>{totalCount} {t('pieces')}</b>
               </span>
               <span>
-              Сумма заказа: <b>{totalPrice ? totalPrice.toFixed(2) : totalPrice} сом</b>
+              {t('order.amount')} <b>{totalPrice ? totalPrice.toFixed(2) : totalPrice} {t('som')}</b>
               </span>
             </div>
             <div className="cart__bottom-buttons">
@@ -181,7 +182,7 @@ function Cart() {
                   />
                 </svg>
                 <Link to="/">
-                  <span>Вернуться назад</span>
+                  <span> {t('go.back')}</span>
                 </Link>
               </a>
 
@@ -199,16 +200,16 @@ function Cart() {
       ) : (
         <div className="cart cart--empty">
           <h2>
-            Корзина пустая <i>😕</i>
+          {t('cart.empty')} <i>😕</i>
           </h2>
           <p>
-            Вы, наверное, еще не заказали пиццу.
+          {t('cart.mess1')}
             <br />
-            Чтобы заказать пиццу, перейдите на главную страницу.
+            {t('cart.mess2')}
           </p>
           <img src={cartEmptyImage} alt="Empty cart" />
           <Link to="/" className="button button--black">
-            <span>Вернуться назад</span>
+            <span> {t('go.back')}</span>
           </Link>
         </div>
       )}

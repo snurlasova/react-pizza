@@ -4,6 +4,7 @@ import classes from './card-item.module.scss';
 import cx from 'classnames';
 import { useDispatch } from 'react-redux';
 import { CartActionTypes } from '../../types/redux/ICart';
+import { useTranslation } from 'react-i18next';
 
 interface ICardItemProps {
   item: ICardItem;
@@ -33,7 +34,7 @@ const CardItem: React.FC<ICardItemProps> = (props) => {
 
     dispatch({ type: CartActionTypes.ADD_PIZZA, payload: obj });
   };
-
+  const {t} = useTranslation()
   return (
     <li className={classes.cardItem}>
       <img className={classes.img} src={url} alt={title} />
@@ -64,13 +65,13 @@ const CardItem: React.FC<ICardItemProps> = (props) => {
                 [classes.disabled]: !sizes.includes(size),
               })}
             >
-              {size} см.
+              {size} {t('sm')}
             </li>
           ))}
         </ul>
       </div>
       <div className="mt-4 d-flex justify-content-between align-items-center">
-        <p className={classes.cardPrice}> от {price} сом</p>
+        <p className={classes.cardPrice}> {t('from')} {price} {t('som')}</p>
         <button
           className={classes.btn}
           onMouseLeave={(e) => setColorPlus('#FE5F1E')}
@@ -94,7 +95,7 @@ const CardItem: React.FC<ICardItemProps> = (props) => {
                 />
               </svg>
             </span>
-            <p>Добавить</p>
+            <p>{t('add')}</p>
             {itemCount > 0 ? (
               <span className={classes.count}>
                 <span>{itemCount}</span>

@@ -1,3 +1,26 @@
 {
-    "header.title":"The most delicious pizza in the world!"
+    "header.title":"The most delicious pizza in the world!",
+    "categorie1":"All",
+    "categorie2":"Meat",
+    "categorie3":"Vegan",
+    "categorie4":"Grill",
+    "categorie5":"Spicy",
+    "categorie6":"Closed",
+    "sort-title":"Sort by:",
+    "from":"from",
+    "som":"som",
+    "add":"Add",
+    "sm":"sm.",
+    "cart":"Cart",
+    "cart.clear": "Empty the cart",
+    "cart.empty":"The cart is empty",
+    "total.pizza": "Total pizza:",
+    "pieces":"pc.",
+    "order.amount":"Order amount:",
+    "go.back":"Go back",
+    "cart.mess1":"You probably haven't ordered a pizza yet.",
+    "cart.mess2":"To order a pizza, go to the main page."
+    
+
+    
 }
