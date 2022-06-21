@@ -33,6 +33,7 @@ const CardItem: React.FC<ICardItemProps> = (props) => {
 
     dispatch({ type: CartActionTypes.ADD_PIZZA, payload: obj });
   };
+
   return (
     <li className={classes.cardItem}>
       <img className={classes.img} src={url} alt={title} />

@@ -1,7 +1,11 @@
 import React from 'react';
+import React1, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { useTypedSelector } from '../../hooks/useTypedSelector';
+import i18n from "i18next";
+import { useTranslation } from 'react-i18next';
+import  "../lang/lang"
 import logo from '../../assest/img/logo.png';
 // @ts-ignore
 import bootstrap from '../../../node_modules/bootstrap/dist/css/bootstrap.css';
@@ -10,6 +14,15 @@ import cx from 'classnames';
 import classes from './app-header.module.scss';
 
 function Header() {
+  const {t} = useTranslation()
+
+  const [language, setLanguage] = useState("ru");
+
+  const handleLangChange = (evt: { target: { value: any; }; }) => {
+      const lang = evt.target.value;
+      setLanguage(lang);
+      i18n.changeLanguage(lang);
+  };
   const { totalCount, totalPrice } = useTypedSelector(({ cart }) => cart);
   return (
     <header className={classes.header}>
@@ -19,7 +32,7 @@ function Header() {
             <img className={classes.logo} src={logo} alt="logo" />
             <div className={classes.text}>
               <h1 className={classes.title}>REACT PIZZA</h1>
-              <p className={classes.desc}>Самая вкусная пицца в мире!</p>
+              <p className={classes.desc}>{t('header.title')}</p>
             </div>
           </Link>
           <Link to="/cart" className={cx('col-4', classes.right)}>
@@ -63,6 +76,11 @@ function Header() {
               </div>
             </button>
           </Link>
+          <select onChange={handleLangChange} value={language} className="lang">
+                        <option className="en" value="en">EN</option> 
+                        <option className="ru" value="ru">RU</option> 
+                        <option className="kg"value="kg">KG</option> 
+          </select> 
         </div>
       </div>
     </header>
