@@ -19,8 +19,18 @@
     "order.amount":"Order amount:",
     "go.back":"Go back",
     "cart.mess1":"You probably haven't ordered a pizza yet.",
-    "cart.mess2":"To order a pizza, go to the main page."
-    
+    "cart.mess2":"To order a pizza, go to the main page.",
+    "ok": "OK",
+    "order.message":"Thank you, your order is accepted!",
+    "close":"Close",
+    "modal.title":"Order registration",
+    "label_1":"Full name:",
+    "label_2":"Phone number:",
+    "label_3":"Address:",
+    "label_4":"Card number:",
+    "label_5":"Enter the amount:",
+    "checkbox":"The delivery address matches the billing address",
+    "button.pay":"PAY NOW"   
 
     
 }
