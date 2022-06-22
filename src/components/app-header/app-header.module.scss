@@ -61,4 +61,7 @@
     padding: 1rem 2rem;
     border-radius: 3rem;
   }
+  .lang{
+    @include font(1.3rem, 700, 1.4rem, $orange);
+  }
 }

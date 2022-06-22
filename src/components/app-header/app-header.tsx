@@ -76,10 +76,10 @@ function Header() {
               </div>
             </button>
           </Link>
-          <select onChange={handleLangChange} value={language} className="lang">
-                        <option className="en" value="en">EN</option> 
-                        <option className="ru" value="ru">RU</option> 
-                        <option className="kg"value="kg">KG</option> 
+          <select onChange={handleLangChange} value={language} className={cx(classes.lang)}>
+                        <option className="header__lang" value="en">EN</option> 
+                        <option className="header__lang" value="ru">RU</option> 
+                        <option className="header__lang"value="kg">KG</option> 
           </select> 
         </div>
       </div>
