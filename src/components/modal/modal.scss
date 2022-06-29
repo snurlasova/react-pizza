@@ -18,9 +18,9 @@ h2#child-modal-title{
     font-weight: bolder; 
 }
 button.css-1e6y48t-MuiButtonBase-root-MuiButton-root{
-    @include font(1.3rem, 600, 1.4rem, #fff);
+    @include font(0.8rem, 600, 1.4rem, #fff);
     background-color: $orange;
-    border-radius: 3rem;
+    border-radius: 0.5rem;
     border: none;
     outline:none;
 }
@@ -36,8 +36,9 @@ button.css-1e6y48t-MuiButtonBase-root-MuiButton-root:hover{
 .input{
     border: 1px solid $orange;
     border-radius: 30px;
-    padding: 12px;
+    padding: 10px;
     margin: 5px 0;
+    font-size: 1.2rem;
 }
 
 .css-6z8jno{

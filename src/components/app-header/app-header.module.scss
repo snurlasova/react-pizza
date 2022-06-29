@@ -62,6 +62,6 @@
     border-radius: 3rem;
   }
   .lang{
-    @include font(1.3rem, 700, 1.4rem, $orange);
+    @include font(1rem, 700, 1rem, $orange);
   }
 }

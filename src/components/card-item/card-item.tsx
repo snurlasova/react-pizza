@@ -5,7 +5,7 @@ import cx from 'classnames';
 import { useDispatch } from 'react-redux';
 import { CartActionTypes } from '../../types/redux/ICart';
 import { useTranslation } from 'react-i18next';
-
+import MenuItem from '../lang/lang';
 interface ICardItemProps {
   item: ICardItem;
   itemCount: number;
@@ -13,8 +13,9 @@ interface ICardItemProps {
 
 const CardItem: React.FC<ICardItemProps> = (props) => {
   const dispatch = useDispatch();
-
+  const {t} = useTranslation()
   const { itemCount } = props;
+  const menu = t ('menu', {returnObjects:true});
   const { title, category, id, price, url, types, sizes } = props.item,
     pizzaSize = [26, 30, 40],
     pizzaTypes = ['традиционное', 'традиционное'],
@@ -34,7 +35,7 @@ const CardItem: React.FC<ICardItemProps> = (props) => {
 
     dispatch({ type: CartActionTypes.ADD_PIZZA, payload: obj });
   };
-  const {t} = useTranslation()
+  
   return (
     <li className={classes.cardItem}>
       <img className={classes.img} src={url} alt={title} />

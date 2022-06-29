@@ -30,7 +30,8 @@
     "label_4":"Card number:",
     "label_5":"Enter the amount:",
     "checkbox":"The delivery address matches the billing address",
-    "button.pay":"PAY NOW"   
+    "button.pay":"PAY NOW",  
+	"dough":"dough"
 
-    
+
 }

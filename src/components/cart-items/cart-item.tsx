@@ -1,4 +1,5 @@
 import React, { FC, MouseEvent } from 'react';
+import { useTranslation } from 'react-i18next';
 
 interface ICartItemProps {
   id: number;
@@ -12,7 +13,7 @@ interface ICartItemProps {
   onMinus: (id: number) => void;
   onPlus: (id: number) => void;
 }
-
+const {t} = useTranslation();
 const CartItem: FC<ICartItemProps> = (props) => {
   const {
     id,
@@ -26,7 +27,7 @@ const CartItem: FC<ICartItemProps> = (props) => {
     onMinus,
     onPlus,
   } = props;
-
+  
   return (
     <div className="cart__item">
       <div className="cart__item-img">
@@ -35,7 +36,7 @@ const CartItem: FC<ICartItemProps> = (props) => {
       <div className="cart__item-info">
         <h3>{title}</h3>
         <p>
-          {type} тесто, {size} см.
+          {type} {t('dough')} , {size} {t('sm')}
         </p>
       </div>
       <div className="cart__item-count">
@@ -84,7 +85,7 @@ const CartItem: FC<ICartItemProps> = (props) => {
         </div>
       </div>
       <div className="cart__item-price">
-        <b>{totalPrice.toFixed(2).toString().length < 4 ? `${totalPrice.toFixed(2)}0`:  totalPrice.toFixed(2)} cом</b>
+        <b>{totalPrice.toFixed(2).toString().length < 4 ? `${totalPrice.toFixed(2)}0`:  totalPrice.toFixed(2)} {t('som')}</b>
       </div>
       <div className="cart__item-remove">
         <button onClick={() => onRemove(id)} className="button--circle">
