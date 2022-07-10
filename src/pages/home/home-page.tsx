@@ -9,6 +9,7 @@ import SortPopup from '../../components/sort-popup/sort-popup';
 import { setCategory, setSortBy } from '../../redux/redux-components/filter';
 import { thunkPizzaAction } from '../../redux/redux-components/card';
 import { useTranslation } from 'react-i18next';
+import {dynamicLocalization} from "../../helpers/dynamicLocalization";
 
 const HomePage = () => {
   const {t} = useTranslation();
@@ -20,17 +21,17 @@ const HomePage = () => {
     dispatch(thunkPizzaAction(category, sortBy));
   }, [category, sortBy]);
   const sortIems = [
-    { name: 'По популярности', type: 'popular', order: 'desc' },
-    { name: 'По цене', type: 'price', order: 'desc' },
-    { name: 'По алфавиту', type: 'name', order: 'asc' },
+    { name: dynamicLocalization('По популярности','By Popularity','По популярности'), type: 'popular', order: 'desc' },
+    { name: dynamicLocalization('По цене','By price','По цене'), type: 'price', order: 'desc' },
+    { name: dynamicLocalization('По алфавиту','Alphabetically','По алфавиту'), type: 'name', order: 'asc' },
   ];
 
   const categoryNames = [
-    'Мясные',
-    'Веган',
-    'Гриль',
-    'Острый',
-    'Закрытые',
+    dynamicLocalization('Мясные','Meat','Мясные'),
+    dynamicLocalization('Веган','Vegan','Веган'),
+    dynamicLocalization('Гриль','Grill','Гриль'),
+    dynamicLocalization('Острый','Sharp','Острый'),
+    dynamicLocalization('Закрытые','Closed','Закрытые'),
   ];
 
   const onSelectCategory = useCallback((index: number | null) => {

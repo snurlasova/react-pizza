@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import React1, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
@@ -23,6 +23,15 @@ function Header() {
       setLanguage(lang);
       i18n.changeLanguage(lang);
   };
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      localStorage.getItem('i18nextLng') ? i18n.changeLanguage(localStorage.getItem('i18nextLng') || 'ru') : i18n.changeLanguage('ru');
+      setLanguage(localStorage.getItem('i18nextLng') || 'ru')
+    }
+  }, []);
+
+
   const { totalCount, totalPrice } = useTypedSelector(({ cart }) => cart);
   return (
     <header className={classes.header}>
@@ -79,7 +88,7 @@ function Header() {
           <select onChange={handleLangChange} value={language} className={cx(classes.lang)}>
                         <option className={cx(classes.lang)} value="en">EN</option> 
                         <option className={cx(classes.lang)} value="ru">RU</option> 
-                        <option className={cx(classes.lang)}value="kg">KG</option> 
+                        <option className={cx(classes.lang)} value="kg">KG</option>
           </select> 
         </div>
       </div>

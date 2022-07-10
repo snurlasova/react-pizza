@@ -6,8 +6,9 @@ import { useDispatch } from 'react-redux';
 import { CartActionTypes } from '../../types/redux/ICart';
 import { useTranslation } from 'react-i18next';
 import MenuItem from '../lang/lang';
+import {dynamicLocalization} from "../../helpers/dynamicLocalization";
 interface ICardItemProps {
-  item: ICardItem;
+  item: any;
   itemCount: number;
 }
 
@@ -15,10 +16,10 @@ const CardItem: React.FC<ICardItemProps> = (props) => {
   const dispatch = useDispatch();
   const {t} = useTranslation()
   const { itemCount } = props;
-  const menu = t ('menu', {returnObjects:true});
-  const { title, category, id, price, url, types, sizes } = props.item,
+  const menu = t('menu', {returnObjects:true});
+  const { title_ru, title_en, title_kg, category, id, price, url, types, sizes } = props.item,
     pizzaSize = [26, 30, 40],
-    pizzaTypes = ['традиционное', 'традиционное'],
+    pizzaTypes = [dynamicLocalization('тонкое','thin','тонкое'), dynamicLocalization('традиционное','traditional','традиционное')],
     [colorPlus, setColorPlus] = useState('#EB5A1E'),
     [activeSize, setActiveSize] = useState<number>(2),
     [activeType, setActiveType] = useState<number>(types[0]);
@@ -26,7 +27,7 @@ const CardItem: React.FC<ICardItemProps> = (props) => {
   const addPizza = () => {
     const obj = {
       id,
-      title,
+      title: dynamicLocalization(title_ru, title_en, title_kg),
       url,
       price,
       size: pizzaSize[activeSize],
@@ -38,8 +39,8 @@ const CardItem: React.FC<ICardItemProps> = (props) => {
   
   return (
     <li className={classes.cardItem}>
-      <img className={classes.img} src={url} alt={title} />
-      <h3 className={classes.title}>{title}</h3>
+      <img className={classes.img} src={url} alt={dynamicLocalization(title_ru, title_en, title_kg)} />
+      <h3 className={classes.title}>{dynamicLocalization(title_ru, title_en, title_kg)}</h3>
       <div className={classes.selectorBlock}>
         <ul className={classes.cardList}>
           {pizzaTypes.map((type, i) => (

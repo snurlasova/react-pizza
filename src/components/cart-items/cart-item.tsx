@@ -13,7 +13,6 @@ interface ICartItemProps {
   onMinus: (id: number) => void;
   onPlus: (id: number) => void;
 }
-const {t} = useTranslation();
 const CartItem: FC<ICartItemProps> = (props) => {
   const {
     id,
@@ -27,7 +26,8 @@ const CartItem: FC<ICartItemProps> = (props) => {
     onMinus,
     onPlus,
   } = props;
-  
+  const {t} = useTranslation();
+
   return (
     <div className="cart__item">
       <div className="cart__item-img">
