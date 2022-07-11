@@ -21,17 +21,17 @@ const HomePage = () => {
     dispatch(thunkPizzaAction(category, sortBy));
   }, [category, sortBy]);
   const sortIems = [
-    { name: dynamicLocalization('По популярности','By Popularity','По популярности'), type: 'popular', order: 'desc' },
-    { name: dynamicLocalization('По цене','By price','По цене'), type: 'price', order: 'desc' },
-    { name: dynamicLocalization('По алфавиту','Alphabetically','По алфавиту'), type: 'name', order: 'asc' },
+    { name: dynamicLocalization('По популярности','By Popularity','Популярдуу'), type: 'popular', order: 'desc' },
+    { name: dynamicLocalization('По цене','By price','Баасы'), type: 'price', order: 'desc' },
+    { name: dynamicLocalization('По алфавиту','Alphabetically','Алфавит'), type: 'name', order: 'asc' },
   ];
 
   const categoryNames = [
-    dynamicLocalization('Мясные','Meat','Мясные'),
+    dynamicLocalization('Мясные','Meat','Эттүү'),
     dynamicLocalization('Веган','Vegan','Веган'),
     dynamicLocalization('Гриль','Grill','Гриль'),
-    dynamicLocalization('Острый','Sharp','Острый'),
-    dynamicLocalization('Закрытые','Closed','Закрытые'),
+    dynamicLocalization('Острый','Sharp','Ачуу'),
+    dynamicLocalization('Закрытые','Closed','Жабык'),
   ];
 
   const onSelectCategory = useCallback((index: number | null) => {

@@ -16,12 +16,12 @@ const App: React.FC = () => {
           <Switch>
             <Route exact path="/" component={HomePage} />
             <Route exact path="/cart" component={CartPage} />
-  
-          </Switch>
+            </Switch>
         </div>
       </div>
     </div>
-  );
+  );  
 };
+
 
 export default App;
