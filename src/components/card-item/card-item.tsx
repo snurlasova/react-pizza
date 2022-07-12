@@ -19,7 +19,7 @@ const CardItem: React.FC<ICardItemProps> = (props) => {
   const menu = t('menu', {returnObjects:true});
   const { title_ru, title_en, title_kg, category, id, price, url, types, sizes } = props.item,
     pizzaSize = [26, 30, 40],
-    pizzaTypes = [dynamicLocalization('тонкое','thin','тонкое'), dynamicLocalization('традиционное','traditional','традиционное')],
+    pizzaTypes = [dynamicLocalization('тонкое','thin','жука'), dynamicLocalization('традиционное','traditional','салттуу')],
     [colorPlus, setColorPlus] = useState('#EB5A1E'),
     [activeSize, setActiveSize] = useState<number>(2),
     [activeType, setActiveType] = useState<number>(types[0]);
