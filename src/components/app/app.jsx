@@ -7,11 +7,11 @@ import HomePage from '../../pages/home/home-page';
 
 
 // import BaseModalWrapper  from '../../components/modal/BaseModalWrapper';
-
-  return (
+const App = () => {
+  return  (
     <div className="app__wrapper container">
       <div className="app__container">
-        <AppHeader />
+        <AppHeader/>
         <div className="app__content container">
           <Switch>
             <Route exact path="/" component={HomePage} />
@@ -20,7 +20,9 @@ import HomePage from '../../pages/home/home-page';
         </div>
       </div>
     </div>
+
   );  
+}
 
 
 export default App;
