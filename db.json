@@ -2,7 +2,7 @@
 	"menu": [
 		{
 			"id": 0,
-			"url": "https://dodopizza.azureedge.net/static/Img/Products/f035c7f46c0844069722f2bb3ee9f113_584x584.jpeg",
+			"url": "https://media.dodostatic.net/image/r:292x292/11EE7D61698827EE9B8DB6D0AEC53410.avif",
 			"title_ru": "Чизбургер-пицца",
 			"title_en": "Cheeseburger-pizza",
 			"title_kg": "Чизбургер пиццасы",
@@ -14,7 +14,7 @@
 		},
 		{
 			"id": 1,
-			"url": "https://dodopizza.azureedge.net/static/Img/Products/Pizza/ru-RU/2ffc31bb-132c-4c99-b894-53f7107a1441.jpg",
+			"url": "https://media.dodostatic.net/image/r:292x292/11EE7D610D2925109AB2E1C92CC5383C.avif",
 			"title_ru": "Сырная",
 			"title_en": "Cheese",
 			"title_kg": "Сыр менен",
@@ -38,7 +38,7 @@
 		},
 		{
 			"id": 3,
-			"url": "https://dodopizza.azureedge.net/static/Img/Products/Pizza/ru-RU/af553bf5-3887-4501-b88e-8f0f55229429.jpg",
+			"url": "https://media.dodostatic.net/image/r:292x292/11EE7D610E8BBB248F31270BE742B4BD.avif",
 			"title_ru": "Сырный цыпленок",
 			"title_en": "Cheese chicken",
 			"title_kg": "Сыр, тоок эти менен",
@@ -74,7 +74,7 @@
 		},
 		{
 			"id": 6,
-			"url": "https://dodopizza.azureedge.net/static/Img/Products/Pizza/ru-RU/d2e337e9-e07a-4199-9cc1-501cc44cb8f8.jpg",
+			"url": "https://media.dodostatic.net/image/r:292x292/11EE7D610A62D78598406363A9A8AD65.avif",
 			"title_ru": "Пепперони",
 			"title_en": "Pepperoni",
 			"title_kg": "Пепперони",
